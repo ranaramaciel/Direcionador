@@ -1,0 +1,65 @@
+/* Área dos blocos de feedback */
+.feedback-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 100px;
+    padding-bottom: 100px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
+  
+  /* Bloco padrão: invisível e com deslocamento inicial */
+  .feedback-block {
+    opacity: 0;
+    transition: all 1.6s ease;
+    width: 90%;
+    max-width: 320px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  /* Bloco ímpar: entra da direita */
+  .feedback-block.right {
+    transform: translateX(100px);
+  }
+  
+  /* Bloco par: entra da esquerda */
+  .feedback-block.left {
+    transform: translateX(-100px);
+  }
+  
+  /* Quando ativo (aparece com animação) */
+  .feedback-block.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Imagem do cliente */
+  .feedback-block img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Texto fixo abaixo da imagem */
+  .feedback-block p {
+    color: white;
+    font-weight: 500;
+  }
+  
+  /* Título centralizado antes da seção de feedback */
+  .feedback-title {
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+ 
+  
